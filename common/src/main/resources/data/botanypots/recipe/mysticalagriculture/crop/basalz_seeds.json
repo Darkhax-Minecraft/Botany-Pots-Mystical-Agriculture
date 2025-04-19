@@ -1,0 +1,18 @@
+{
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "mysticalagriculture:basalz_crop"
+      ]
+    },
+    {
+      "type": "bookshelf:item_exists",
+      "values": [
+        "mysticalagriculture:basalz_seeds"
+      ]
+    }
+  ],
+  "type": "botanypotsmystical:mystical_crop",
+  "crop_id": "mysticalagriculture:basalz"
+}

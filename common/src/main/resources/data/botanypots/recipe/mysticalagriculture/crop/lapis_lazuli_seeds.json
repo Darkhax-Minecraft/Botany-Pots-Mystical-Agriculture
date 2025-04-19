@@ -1,0 +1,18 @@
+{
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "mysticalagriculture:lapis_lazuli_crop"
+      ]
+    },
+    {
+      "type": "bookshelf:item_exists",
+      "values": [
+        "mysticalagriculture:lapis_lazuli_seeds"
+      ]
+    }
+  ],
+  "type": "botanypotsmystical:mystical_crop",
+  "crop_id": "mysticalagriculture:lapis_lazuli"
+}

@@ -1,0 +1,13 @@
+{
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "mysticalagradditions:neutronium_crux"
+      ]
+    }
+  ],
+  "type": "botanypots:block_derived_soil",
+  "block": "mysticalagradditions:neutronium_crux",
+  "growth_modifier": 0.50
+}

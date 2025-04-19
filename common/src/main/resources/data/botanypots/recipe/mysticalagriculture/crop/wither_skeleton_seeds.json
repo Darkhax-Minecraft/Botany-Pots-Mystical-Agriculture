@@ -1,0 +1,18 @@
+{
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "mysticalagriculture:wither_skeleton_crop"
+      ]
+    },
+    {
+      "type": "bookshelf:item_exists",
+      "values": [
+        "mysticalagriculture:wither_skeleton_seeds"
+      ]
+    }
+  ],
+  "type": "botanypotsmystical:mystical_crop",
+  "crop_id": "mysticalagriculture:wither_skeleton"
+}

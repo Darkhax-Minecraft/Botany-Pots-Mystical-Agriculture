@@ -1,0 +1,13 @@
+{
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "mysticalagradditions:insanium_farmland"
+      ]
+    }
+  ],
+  "values": [
+    "mysticalagradditions:insanium_farmland"
+  ]
+}

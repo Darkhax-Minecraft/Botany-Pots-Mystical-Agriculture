@@ -1,0 +1,18 @@
+{
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "mysticalagriculture:grains_of_infinity_crop"
+      ]
+    },
+    {
+      "type": "bookshelf:item_exists",
+      "values": [
+        "mysticalagriculture:grains_of_infinity_seeds"
+      ]
+    }
+  ],
+  "type": "botanypotsmystical:mystical_crop",
+  "crop_id": "mysticalagriculture:grains_of_infinity"
+}
