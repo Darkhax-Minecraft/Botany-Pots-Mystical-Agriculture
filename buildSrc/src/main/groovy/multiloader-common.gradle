@@ -120,6 +120,8 @@ processResources {
             'bookshelf_version_range'      : bookshelf_version_range,
             'prickle_version'              : prickle_version,
             'prickle_version_range'        : prickle_version_range,
+            'bpots_version'                : bpots_version,
+            'bpots_version_range'          : bpots_version_range,
             'java_version'                 : java_version,
             'curse_project'                : curse_project,
             'curse_page'                   : curse_page,

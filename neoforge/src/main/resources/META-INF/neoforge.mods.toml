@@ -48,3 +48,10 @@ type = "required"
 versionRange = "${prickle_version_range}"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies.${ mod_id }]]
+modId = "botanypots"
+type = "required"
+versionRange = "${bpots_version_range}"
+ordering = "NONE"
+side = "BOTH"
