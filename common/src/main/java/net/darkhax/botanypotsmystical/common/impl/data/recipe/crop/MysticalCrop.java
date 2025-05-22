@@ -91,7 +91,7 @@ public class MysticalCrop extends BasicCrop {
         int growTime = Config.getTierConfig(mysticalCrop.getTier()).tier_tick_rate;
         final List<Display> display = List.of(new AgingDisplayState(mysticalCrop.getCropBlock(), BasicOptions.ofDefault()));
         final List<ItemDropProvider> drops = List.of(getDrops(mysticalCrop));
-        return new Properties(Ingredient.of(mysticalCrop.getSeedsItem()), soil, growTime, display, 0, drops, Optional.empty());
+        return new Properties(Ingredient.of(mysticalCrop.getSeedsItem()), soil, growTime, display, 0, drops, Optional.empty(), Optional.empty());
     }
 
     private static ItemDropProvider getDrops(Crop crop) {
