@@ -1,0 +1,18 @@
+{
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "mysticalagriculture:unobtainium_crop"
+      ]
+    },
+    {
+      "type": "bookshelf:item_exists",
+      "values": [
+        "mysticalagriculture:unobtainium_seeds"
+      ]
+    }
+  ],
+  "type": "botanypotsmystical:mystical_crop",
+  "crop_id": "mysticalcustomization:unobtainium"
+}
