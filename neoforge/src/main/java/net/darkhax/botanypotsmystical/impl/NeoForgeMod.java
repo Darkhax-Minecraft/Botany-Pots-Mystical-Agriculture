@@ -5,6 +5,7 @@ import com.blakebr0.mysticalagriculture.init.ModBlocks;
 import com.blakebr0.mysticalagriculture.init.ModItems;
 import net.darkhax.bookshelf.common.api.function.CachedSupplier;
 import net.darkhax.botanypotsmystical.common.impl.BotanyPotsMysticalMod;
+import net.darkhax.botanypotsmystical.common.impl.config.Config;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.crafting.CompoundIngredient;
@@ -18,5 +19,6 @@ public class NeoForgeMod {
         BotanyPotsMysticalMod.FERTILIZED_ESSENCE = CachedSupplier.cache(() -> ModItems.FERTILIZED_ESSENCE.get());
         BotanyPotsMysticalMod.INFERIUM_FARMLAND = CachedSupplier.cache(() -> ModBlocks.INFERIUM_FARMLAND.get());
         BotanyPotsMysticalMod.COMBO = ingredients -> CompoundIngredient.of(ingredients.toArray(Ingredient[]::new));
+        Config.CONFIG.get();
     }
 }

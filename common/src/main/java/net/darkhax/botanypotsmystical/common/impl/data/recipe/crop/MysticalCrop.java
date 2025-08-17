@@ -81,7 +81,7 @@ public class MysticalCrop extends BasicCrop {
         if (mysticalCrop == null) {
             throw new JsonParseException("Crop ID '" + mysticalCropId + "' not found in registry!");
         }
-        Ingredient soil = SOIL_TIERS.get().get(mysticalCrop.getTier().getId());
+        Ingredient soil = Config.CONFIG.get().require_soil_tier ? SOIL_TIERS.get().get(mysticalCrop.getTier().getId()) : BasicCrop.DIRT;
         if (soil == null) {
             soil = Ingredient.of(mysticalCrop.getTier().getFarmland().asItem());
         }
@@ -99,9 +99,11 @@ public class MysticalCrop extends BasicCrop {
         final float secondaryChance = (float) crop.getSecondaryChance(BotanyPotsMysticalMod.INFERIUM_FARMLAND.get());
 
         // seed
-        drops.add(new SimpleDropProvider.SimpleDrop(crop.getSeedsItem().getDefaultInstance(), 1f));
-        if (BotanyPotsMysticalMod.CFG_SECOND_SEED.get() && secondaryChance > 0f) {
-            drops.add(new SimpleDropProvider.SimpleDrop(crop.getSeedsItem().getDefaultInstance(), secondaryChance));
+        if (Config.CONFIG.get().allow_seed_drops) {
+            drops.add(new SimpleDropProvider.SimpleDrop(crop.getSeedsItem().getDefaultInstance(), 1f));
+            if (BotanyPotsMysticalMod.CFG_SECOND_SEED.get() && secondaryChance > 0f) {
+                drops.add(new SimpleDropProvider.SimpleDrop(crop.getSeedsItem().getDefaultInstance(), secondaryChance));
+            }
         }
         // crop
         drops.add(new SimpleDropProvider.SimpleDrop(crop.getEssenceItem().getDefaultInstance(), 1f));
@@ -109,7 +111,7 @@ public class MysticalCrop extends BasicCrop {
             drops.add(new SimpleDropProvider.SimpleDrop(crop.getEssenceItem().getDefaultInstance(), secondaryChance));
         }
         // essence
-        if (BotanyPotsMysticalMod.CFG_ESSENCE_CHANCE.get() > 0f) {
+        if (Config.CONFIG.get().allow_fertilized_essence_drops && BotanyPotsMysticalMod.CFG_ESSENCE_CHANCE.get() > 0f) {
             drops.add(new SimpleDropProvider.SimpleDrop(new ItemStack(BotanyPotsMysticalMod.FERTILIZED_ESSENCE.get()), BotanyPotsMysticalMod.CFG_ESSENCE_CHANCE.get().floatValue()));
         }
         return new SimpleDropProvider(drops);
